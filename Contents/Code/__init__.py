@@ -2,7 +2,7 @@ import os, json
 
 load_file = Core.storage.load
 
-class JsonMovieAgent(Agent.Movies):
+class JsonAgent(Agent.Movies):
 
     name = 'JsonMovieAgent'
     primary_provider = True
@@ -138,3 +138,5 @@ class JsonMovieAgent(Agent.Movies):
         except: pass
 
         return metadata
+
+movieAgent = JsonAgent
