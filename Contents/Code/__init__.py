@@ -137,6 +137,4 @@ class JsonAgent(Agent.Movies):
         try: metadata.original_title = info['original_title']
         except: pass
 
-        return metadata
-
 movieAgent = JsonAgent
