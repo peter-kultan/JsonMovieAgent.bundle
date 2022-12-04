@@ -1,4 +1,5 @@
 import os, json
+from dateutil.parser import parse
 
 load_file = Core.storage.load
 
@@ -55,6 +56,9 @@ class JsonAgent(Agent.Movies):
         except: pass
 
         try: metadata.year = info['year']
+        except: pass
+
+        try: metadata.originally_available_at = parse(info['originally_available_at'])
         except: pass
 
         try: metadata.rating = info['rating']
@@ -132,11 +136,6 @@ class JsonAgent(Agent.Movies):
             for d in info['countries']:
                 metadata.countries.add(d)
         except:
-            pass  
-            
-        try: metadata.original_title = info['original_title']
-        except: pass
-
-        return metadata
+            pass
 
 movieAgent = JsonAgent
