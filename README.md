@@ -1,6 +1,6 @@
 JSON Metadata Agent for Plex
 ============================
-Plex agent for Plex to laod movie metadata from JSON located in folder with your media.
+Plex agent for Plex to load movie metadata from JSON located in folder with your media.
 
 Media Structure
 ---------------
@@ -25,7 +25,7 @@ Movies
 
 Example JSON
 ------------
-The `Info.json` file is structured to follow Plex Movie Metadata Model as much as possible. It should looks someting like (this example is for `Movie subdir` mentioned above):
+The `Info.json` file is structured to follow Plex Movie Metadata Model as much as possible. It should look something like (this example is for `Movie subdir` mentioned above):
 
 ```json
 {
@@ -94,4 +94,14 @@ The `Info.json` file is structured to follow Plex Movie Metadata Model as much a
 }
 ```
 
-The keys of metadatas are movie media file names with suffix and all fields are optional.
+The keys of metadata are movie media file names with suffix. All fields in metadata are optional.
+
+Installation
+-----------
+1. Download the [zipped bundle](https://github.com/peter-kultan/JsonMovieAgent.bundle/archive/refs/heads/main.zip).
+2. Extract it.
+3. rename it to JsonMovieAgent.bundle.
+4. Find the [Plex Media data directory](https://support.plex.tv/articles/202915258-where-is-the-plex-media-server-data-directory-located/).
+5. move the .bundle folder to the Plug-ins directory.
+6. Restart plex server.
+7. You should be able to see JsonMovieAgent in Agents settings and should be able to pick it in Libraries manager settings as movie library json agent.
